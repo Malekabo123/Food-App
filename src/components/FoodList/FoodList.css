@@ -1,0 +1,125 @@
+#list_container {
+  background: #eee;
+  width: 70vw;
+  padding: 1em 2em;
+  z-index: 5;
+  position: relative;
+  margin: 4em auto;
+  border-radius: 20px;
+}
+
+ul,
+li,
+h3,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.foodItem {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.9);
+}
+
+.foodItem:last-of-type {
+  border-bottom: 0;
+}
+
+.detailsContainer {
+  position: relative;
+}
+
+.description {
+  font-style: italic;
+}
+
+.price {
+  color: rgb(201, 17, 17);
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 0.4em;
+  font-weight: bold;
+}
+
+.amountCount {
+  border: 1px solid #999;
+  padding: 0.4em;
+  width: 4em;
+  border-radius: 5px;
+  font-size: 0.9em;
+  background: transparent;
+}
+
+.amountCount:focus {
+  outline: 0;
+}
+
+.addBtn {
+  background: #57200a;
+  border-radius: 20px;
+  padding: 0.5em 2em;
+  color: #eee;
+  border: 0;
+  outline: 0;
+  font-weight: bold;
+  text-align: center;
+  float: right;
+}
+
+.addBtn:focus {
+  outline: 0;
+}
+
+.addBtn:hover {
+  background: #8a2b06;
+}
+
+.slideClass {
+  animation: slideNFade 1000ms forwards;
+}
+
+@keyframes slideNFade {
+  0% {
+    transform: translate(0, 20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  #list_container {
+    width: 90vw;
+    padding: 1em;
+  }
+
+  .foodItem {
+    flex-direction: column;
+  }
+
+  .detailsContainer {
+    margin-bottom: 2em;
+  }
+
+  .price {
+    position: absolute;
+    top: 0;
+    right: 1em;
+  }
+
+  .amountContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,165 @@
+.modal {
+  position: fixed;
+  top: 20vh;
+  left: 10%;
+  width: 80%;
+  z-index: 99;
+  border-radius: 20px;
+  background: #eee;
+  padding: 2em;
+  overflow: hidden;
+}
+
+.modal ul {
+  max-height: 10rem;
+  overflow: scroll;
+}
+
+.modal ul:empty {
+  overflow: hidden;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.9);
+}
+
+.cartPriceAmount {
+  display: flex;
+  margin-top: 1em;
+}
+
+.cartFoodPrice {
+  color: rgb(201, 17, 17);
+}
+
+.itemCount {
+  border: 1px solid #999;
+  text-align: center;
+  padding: 0.1em 0.4em;
+  margin-left: 3em;
+  width: 3em;
+  border-radius: 5px;
+  font-size: 1em;
+  background: transparent;
+}
+
+.decrease,
+.increase {
+  border: 1px solid #999;
+  text-align: center;
+  padding: 0.3em 1.2em;
+}
+
+.increase {
+  margin-left: 0.5em;
+}
+
+.decrease:focus,
+.increase:focus {
+  outline: 0;
+}
+
+.decrease:hover,
+.increase:hover {
+  border: 1px solid #616060;
+  background: #eee9e9;
+}
+
+.cartTotalAmount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.cartTotalAmount span {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.cartActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cartActions button {
+  border-radius: 20px;
+  padding: 0.5em 2em;
+  border: 0;
+  outline: 0;
+  font-weight: bold;
+  text-align: center;
+  color: #444;
+  transition: all 0.1s ease;
+}
+
+#order {
+  margin-left: 1em;
+  background: #57200a;
+  color: #eee;
+}
+
+#order:hover {
+  background: #8a2b06;
+}
+
+#close:hover {
+  background: #e4e4e4;
+}
+
+.cartActions button:focus {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    left: calc(50% - 20rem);
+    width: 40rem;
+  }
+
+  .modal ul {
+    max-height: 20rem;
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal {
+    padding: 1.5em;
+  }
+  .cartItem {
+    flex-direction: column;
+  }
+
+  .cartFoodName {
+    text-align: center;
+  }
+
+  .cartPriceAmount {
+    justify-content: space-evenly;
+  }
+
+  .itemCount {
+    margin-left: 0;
+  }
+
+  .cartUpdateAmount {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+  }
+
+  .cartTotalAmount > h2,
+  .cartTotalAmount span {
+    font-size: 1.3em;
+  }
+
+  .cartActions {
+    justify-content: center;
+  }
+}
